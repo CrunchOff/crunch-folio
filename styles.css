@@ -109,7 +109,7 @@ footer {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-gap: 2rem;
   max-width: 100%;
   margin: 1rem auto;
@@ -168,22 +168,6 @@ footer {
 @media only screen and (max-width: 480px) {
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste la largeur minimale des colonnes à 200px sur les écrans jusqu'à 480px de large */
-  }
-
-  .grid-item h2 {
-    font-size: 1.8rem; /* Réduit la taille du titre sur les écrans jusqu'à 480px de large */
-  }
-
-  .grid-item p {
-    font-size: 1.2rem; /* Réduit la taille du texte sur les écrans jusqu'à 480px de large */
-  }
-
-  .grid-item-large h2 {
-    font-size: 1.8rem; /* Réduit la taille du titre sur les écrans jusqu'à 480px de large */
-  }
-
-  .grid-item-large p {
-    font-size: 1rem; /* Réduit la taille du texte sur les écrans jusqu'à 480px de large */
   }
 }
 
