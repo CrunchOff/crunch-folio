@@ -51,8 +51,8 @@ footer {
 
 @font-face {
   font-family: 'DINdong';
-  src: url('crunch-floio/fonts/DINdong.woff2') format('woff2'),
-       url('crunch-folio/fonts/DINdong.woff') format('woff');
+  src: url('fonts/DINdong.woff2') format('woff2'),
+       url('fonts/DINdong.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
