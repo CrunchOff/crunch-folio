@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: #080b0d;
+  font-family: 'DINdong', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #080b0d;
+  color: #faf9f7;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #faf9f7;
+}
+
+h1 {
+
+}
+
+h2 {
+  color: #faf9f7;
+}
+
+p {
+  color: #faf9f7;
+}
+
+video {
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+footer {
+  background-color: #080b0d;
+  color: #faf9f7;
+  border-top: 1px solid #faf9f7
+}
+
+/* Import Custom Font */
+
+@font-face {
+  font-family: 'DINdong';
+  src: url('fonts/DINdong.woff2') format('woff2'),
+       url('fonts/DINdong.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Class */
+
+.header-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+
+.header-item-empty {
+  height: auto;
+}
+
+.header-item-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.header-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 100%;
+  width: 100%;
+}
+
+.home-button {
+  font-size: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  transition: font-size 0.3s ease-in-out;
+  filter: blur(0px);
+}
+
+.home-button:hover {
+  font-size: 4.2rem;
+  animation: fast-blur 0.4s ease-in-out forwards;
+}
+
+.logo-img {
+  width: 50px;
+  margin: 0px;
+}
+
+.footer-h2 {
+  font-size: 1.4rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2rem;
+  max-width: 100%;
+  margin: 1rem auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.grid-item {
+  text-align: left;
+  display: block;
+}
+
+.grid-item-large {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  text-align: left;
+  grid-column: span 2;
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid-item video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid-item-large video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid-item h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.grid-item p {
+  font-size: 1.2rem;
+}
+
+.grid-item-large h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.grid-item-large p {
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-item-large {
+    grid-column: span 1; /* Occupe 1 colonne sur les écrans jusqu'à 768px de large */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste la largeur minimale des colonnes à 200px sur les écrans jusqu'à 480px de large */
+  }
+
+  .grid-item h2 {
+    font-size: 1.8rem; /* Réduit la taille du titre sur les écrans jusqu'à 480px de large */
+  }
+
+  .grid-item p {
+    font-size: 1.2rem; /* Réduit la taille du texte sur les écrans jusqu'à 480px de large */
+  }
+
+  .grid-item-large h2 {
+    font-size: 1.8rem; /* Réduit la taille du titre sur les écrans jusqu'à 480px de large */
+  }
+
+  .grid-item-large p {
+    font-size: 1rem; /* Réduit la taille du texte sur les écrans jusqu'à 480px de large */
+  }
+}
+
+
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2rem;
+  max-width: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.footer-item {
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.footer-item p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.link-style {
+  font-size: 1rem;
+  color: #faf9f7;
+  font-family: 'DINdong', monospace !important;
+  text-decoration: none;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.link-style:hover {
+  font-size: 1.1rem;
+}
+
+.animated-icon {
+  font-size: 1em !important;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+/* Animation */
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes fast-blur {
+  0%, 100% {
+    filter: blur(0px);
+  }
+  50% {
+    filter: blur(3px);
+  }
+}

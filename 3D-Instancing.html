@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <title>CrunchFolio</title>
+</head>
+<body>
+  <header>
+    <section class="header-grid-container">
+      <div class="header-item">
+        <a href="index.html">
+          <h1 class="home-button">CrunchFolio</h1>
+        </a>
+      </div>
+
+      <div class="header-item-empty">
+
+      </div>
+
+      <div class="header-item-empty">
+
+      </div>
+
+      <div class="header-item-empty">
+
+      </div>
+
+      <div class="header-item-2">
+        <h2 class="footer-h2">
+          Creative Digital Designer
+        </h2>
+      </div>
+
+    </section>
+
+  </header>
+
+  <main>
+
+
+    <!-- script pour les vidéos -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const videos = document.querySelectorAll('video');
+
+          videos.forEach(video => {
+            if ('playsInline' in video) {
+              video.playsInline = true;
+            } else {
+              video.webkitPlaysInline = true;
+            }
+
+            video.play().catch(error => {
+              // Si la lecture automatique échoue, affichez un message d'erreur ou effectuez une action de secours
+              console.error('Error in autoplay:', error);
+            });
+          });
+        });
+    </script>
+
+  </main>
+
+  <footer>
+    <section class="footer-container">
+
+      <div class="footer-item">
+        <i class="fas fa-arrow-right fa-fw fa-lg animated-icon"></i>
+        <a href="https://www.instagram.com/victorliger.design" target="_blank" class="link-style">@victorliger.design</a>
+      </div>
+
+      <div class="footer-item">
+        <p>la-quimper-city-connexion</p>
+      </div>
+
+      <div class="footer-item">
+        <p>1312 all day</p>
+      </div>
+
+      <div class="footer-item">
+        <p>victor.liger28@gmail.com</p>
+      </div>
+
+      <div class="footer-item">
+        <img src="https://www.dropbox.com/scl/fi/uy5lrf5i6721tdvelso2u/bw-logo.svg?rlkey=x60lf628thixdkqjeaso8r0oq&raw=1" class="logo-img">
+      </div>
+
+    </section>
+  </footer>
+</body>
+</html>
