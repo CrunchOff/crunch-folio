@@ -32,6 +32,7 @@ h2 {
 }
 
 p {
+  font-size: 1.2rem;
   color: #faf9f7;
 }
 
@@ -153,17 +154,9 @@ footer {
   margin-bottom: 1rem;
 }
 
-.grid-item p {
-  font-size: 1.2rem;
-}
-
 .grid-item-large h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-}
-
-.grid-item-large p {
-  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 768px) {
