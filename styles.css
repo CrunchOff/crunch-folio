@@ -169,9 +169,11 @@ footer {
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste la largeur minimale des colonnes à 200px sur les écrans jusqu'à 480px de large */
   }
+
+  .home-button {
+    font-size: 3.2rem;
+  }
 }
-
-
 
 .footer-container {
   display: grid;
