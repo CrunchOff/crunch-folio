@@ -5,10 +5,10 @@ let fadeAmount = 0;
 let width;
 
 function setup() {
-  var canvas = createCanvas(windowWidth/2, 80);
+  var canvas = createCanvas(windowWidth/3, 80);
   canvas.parent('sketch-holder');
   background(10);
-  width = windowWidth/2;
+  width = windowWidth/3;
   x = 0;
   y = 0;
   r = width / 2;
