@@ -5,10 +5,14 @@ let fadeAmount = 0;
 let width;
 
 function setup() {
-  var canvas = createCanvas(windowWidth/3, 80);
+  if (windowWidth < 768) { // Vérifier si la largeur de la fenêtre est inférieure à 768px (taille d'écran typique des téléphones)
+    var canvas = createCanvas(windowWidth-20, 80);
+  } else {
+    var canvas = createCanvas(windowWidth/2.6, 80);
+  }
   canvas.parent('sketch-holder');
   background(10);
-  width = windowWidth/3;
+  width = canvas.width; // Utiliser la largeur du canevas plutôt que la largeur de la fenêtre
   x = 0;
   y = 0;
   r = width / 2;
@@ -36,5 +40,9 @@ function draw() {
 
 // Redimensionner le canevas lorsque la taille de la fenêtre change
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  if (windowWidth < 768) {
+    resizeCanvas(windowWidth-20, 80);
+  } else {
+    resizeCanvas(windowWidth/2.6, 80);
+  }
 }
