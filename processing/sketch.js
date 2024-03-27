@@ -21,7 +21,7 @@ function setup() {
 
 function draw() {
   // Effacer l'écran avec une couleur de fond transparente
-  let t = map(millis(), 0, 100000, 0, 255);
+  let t = map(millis(), 0, 1000000, 0, 255);
   background(8, 11, 13, t);
 
   // Dessiner l'ellipse
