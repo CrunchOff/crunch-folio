@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/DINdong.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/4xgz9aviopyk8cpy60zdq/FAVICON.png?rlkey=so55r5o9ldku50tmo5ptl0yhv&raw=1">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
   <title>CrunchFolio</title>
-  <script src="p5.min.js"></script>
-  <script src="sketch.js"></script>
+  <script src="processing/p5.min.js"></script>
+  <script src="processing/sketch.js"></script>
 </head>
 <body>
   <header>
@@ -19,8 +20,8 @@
         </a>
       </div>
 
-      <div class="header-item-empty">
-
+      <div id="sketch-holder">
+      <!-- Our sketch will go here! -->
       </div>
 
       <div class="header-item-empty">
@@ -46,44 +47,44 @@
 
       <a href="3D-Instancing.html">
         <div class="grid-item"  >
-          <video src="https://www.dropbox.com/scl/fi/ld4soz8fjkquw5qiuocid/instance-3d-v3-compress.mp4?rlkey=jejtvhuwkciisq0zxop9aivow&raw=1" muted loop autoplay></video>
+          <video src="https://www.dropbox.com/scl/fi/ld4soz8fjkquw5qiuocid/instance-3d-v3-compress.mp4?rlkey=jejtvhuwkciisq0zxop9aivow&raw=1" muted loop autoplay preload="auto"></video>
           <h2>TouchDesigner</h2>
           <p>3D Instancing</p>
         </div>
       </a>
 
       <div class="grid-item-large">
-        <video src="https://www.dropbox.com/scl/fi/u1ohww0vt6kdue0ch3d4o/Horsfer-10s.mp4?rlkey=0oasrx2vpqjgb4snratw3npu1&raw=1" muted loop autoplay></video>
+        <video src="https://www.dropbox.com/scl/fi/i8sg75zltax7nfkywytx0/Horsfer-10s-compress-pass-2.mp4?rlkey=vsfap7pxy2fvgvjxnyo6v4u1l&raw=1" muted loop autoplay preload="auto"></video>
         <h2>Horsfer Media</h2>
         <p>Music & Culture</p>
       </div>
 
       <div class="grid-item">
-        <video src="https://www.dropbox.com/scl/fi/rt08zkyt1o5qgwkil49df/render-reel.mp4?rlkey=7hsg9tulsxygac9q7s87z1551&raw=1" muted loop autoplay></video>
+        <video src="https://www.dropbox.com/scl/fi/8boi1lyqdm13ux4qewfgx/streamdiffusion-compress.mp4?rlkey=rhl0jv5n7ojkklglgm9ophpjl&raw=1" muted loop autoplay></video>
         <h2>StreamDiffusion</h2>
         <p>Video-to-Video Experiment</p>
       </div>
 
       <div class="grid-item">
-        <video src="https://www.dropbox.com/scl/fi/9phf87e5kf7b08wgl7396/Reels.mp4?rlkey=hhr4s0wn22h2gu3byuqhms00t&raw=1" muted loop autoplay></video>
+        <video src="https://www.dropbox.com/scl/fi/vi0qck8he7orezrjyko7j/Rework-Pochette-Compress.mp4?rlkey=1flgxcdid8mksk4hi0lsnqunh&raw=1" muted loop autoplay></video>
         <h2>Cover Rework</h2>
         <p>Graphic & 3D Project</p>
       </div>
 
       <div class="grid-item-large">
-        <video src="https://www.dropbox.com/scl/fi/9ih8bkbov4w65d72rygo8/SYNTH.mp4?rlkey=4l87id0dv0p80gpwyrl2lbs0c&raw=1" muted loop autoplay></video>
+        <video src="https://www.dropbox.com/scl/fi/4nzgntab9lxi5mkn6ha74/SYNTH-compress.mp4?rlkey=uetko3his8a4hrft0br3q0q2a&raw=1" muted loop autoplay></video>
         <h2>SYNTHé</h2>
         <p>Study Project</p>
       </div>
 
       <div class="grid-item">
-        <video src="https://www.dropbox.com/scl/fi/gyj8gwqz4s4c83haz6g24/face-compress.mp4?rlkey=wa6vhstnkhrfu4qpmyfgy4nn5&raw=1" muted loop autoplay></video>
+        <video src="https://www.dropbox.com/scl/fi/r79jyc70ubf97ezvywim6/Face-Compress.mp4?rlkey=v7it2sfivvwluhfokwhx1zl35&raw=1" muted loop autoplay></video>
         <h2>TouchDesigner</h2>
         <p>Feedback Experiment</p>
       </div>
 
       <div class="grid-item-large">
-        <video src="https://www.dropbox.com/scl/fi/61e5cllv5giofup0gfgdj/ComfyUI-StrangeEyes.mp4?rlkey=izxihrctx1yyuipusma2mqkz1&raw=1" muted loop autoplay></video>
+        <video src="https://www.dropbox.com/scl/fi/vgh2jl4cow50frtca525o/ComfyUI-StrangeEyes-compress.mp4?rlkey=kcm3zfvuh4uvxy56yyes7bf0w&raw=1" muted loop autoplay></video>
         <h2>ComfyUI</h2>
         <p>Strange Eyes</p>
       </div>
@@ -112,6 +113,12 @@
         <p>Video Edit</p>
       </div>
 
+      <div class="grid-item">
+        <img src="https://www.dropbox.com/scl/fi/trrbr8z3bot2fisw0kbou/design-poster-compress.jpg?rlkey=ly16i961orcl4d4fdldwio9w8&raw=1" muted loop autoplay></video>
+        <h2>Neue Design Area</h2>
+        <p>Poster Graphic Design</p>
+      </div>
+
       <div class="grid-item-large">
         <video src="https://www.dropbox.com/scl/fi/zsnhcw8oqtoodq0t42jzu/Animation-Sensibilisation-Plastique.mp4?rlkey=re8b82mynhyziwe5tmyq8rzis&raw=1" muted loop autoplay></video>
         <h2>Plastique pas si Fantastique</h2>
@@ -130,11 +137,6 @@
         <p>Study Project</p>
       </div>
 
-      <div class="grid-item">
-        <img src="https://www.dropbox.com/scl/fi/trrbr8z3bot2fisw0kbou/design-poster-compress.jpg?rlkey=ly16i961orcl4d4fdldwio9w8&raw=1" muted loop autoplay></video>
-        <h2>Neue Design Area</h2>
-        <p>Poster Graphic Design</p>
-      </div>
 
       <div class="grid-item">
         <img src="https://www.dropbox.com/scl/fi/lq2fojkx05ankqenjzn17/lettre-J-NB-compress.jpg?rlkey=w9by1ldbp76fg4ms9fzbtbeb3&raw=1" muted loop autoplay></video>
