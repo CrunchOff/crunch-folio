@@ -166,6 +166,12 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
+
+  header {
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+  }
+
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste la largeur minimale des colonnes à 200px sur les écrans jusqu'à 480px de large */
   }
