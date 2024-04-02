@@ -25,8 +25,8 @@ function draw() {
   ellipse(x, y, diameter, diameter);
 
   // Mettre à jour les variables
-  x = -sin(millis()*0.0008)*(width/2.2) + (width/2.1);
-  y = cos(millis()*0.00402)*40 + 40;
+  x = -sin(millis()*0.0008)*(width/2.4) + (width/2.1);
+  y = cos(millis()*0.00402)*32 + 40;
   diameter = x/20 + 15;
 }
 
