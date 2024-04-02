@@ -35,6 +35,6 @@ function windowResized() {
   if (windowWidth < 768) {
     resizeCanvas(windowWidth-20, 80);
   } else {
-    resizeCanvas(windowWidth/2.6, 80);
+    resizeCanvas(windowWidth/3, 80);
   }
 }
