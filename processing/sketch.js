@@ -5,7 +5,7 @@ let fadeAmount = 0;
 let width;
 
 function setup() {
-  var canvas = createCanvas(windowWidth, 80);
+  var canvas = createCanvas(windowWidth*0.6, 80);
   canvas.parent('sketch-holder');
   background(8, 11, 13);
   width = canvas.width; // Utiliser la largeur du canevas plutôt que la largeur de la fenêtre
@@ -35,6 +35,6 @@ function windowResized() {
   if (windowWidth < 768) {
     resizeCanvas(windowWidth-20, 80);
   } else {
-    resizeCanvas(windowWidth/3, 80);
+    resizeCanvas(windowWidth*0.5, 80);
   }
 }
