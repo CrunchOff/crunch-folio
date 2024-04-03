@@ -23,6 +23,12 @@ header {
   border-bottom: 1px solid #faf9f7;
 }
 
+@media only screen and (min-width: 768px) {
+  header {
+    height: 82px;
+  }
+}
+
 h1 {
 
 }
