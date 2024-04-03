@@ -1,0 +1,50 @@
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  max-width: 100%;
+  margin: 1rem auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.left-container {
+  display: grid;
+  justify-items: center;
+}
+
+.right-container {
+  display: grid;
+}
+
+.right-container h1 {
+  line-height: 3.6rem;
+  font-size: 3rem;
+  color: #faf9f7;
+  margin: 0px;
+}
+
+.video-content {
+  width: 50%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .project-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste la largeur minimale des colonnes à 200px sur les écrans jusqu'à 480px de large */
+  }
+
+  .video-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .right-container h1 {
+    line-height: 3.2rem;
+    font-size: 2.6rem;
+    color: #faf9f7;
+    margin: 0px;
+  }
+}
