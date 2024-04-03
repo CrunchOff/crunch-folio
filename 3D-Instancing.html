@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/DINdong.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/4xgz9aviopyk8cpy60zdq/FAVICON.png?rlkey=so55r5o9ldku50tmo5ptl0yhv&raw=1">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="project-page-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
   <title>CrunchFolio</title>
+  <script src="processing/p5.min.js"></script>
+  <script src="processing/sketch.js"></script>
 </head>
 <body>
   <header>
@@ -16,8 +21,8 @@
         </a>
       </div>
 
-      <div class="header-item-empty">
-
+      <div id="sketch-holder">
+      <!-- Our sketch will go here! -->
       </div>
 
       <div class="header-item-empty">
@@ -40,6 +45,17 @@
 
   <main>
 
+    <section class="project-content">
+      <div class="left-container">
+        <video src="https://www.dropbox.com/scl/fi/oyzbr1zw5nz0wtcjyenok/instance-3d.mp4?rlkey=sycygks5tu886vnxpl0vfsos0&raw=1" controls class="video-content"></video>
+        <video src="https://www.dropbox.com/scl/fi/2sl0lz5pdr2miax5kic4f/square-balls.mp4?rlkey=gf5l0u63pegtrf3ptf91b3a5e&raw=1" controls class="video-content"></video>
+      </div>
+
+      <div class="right-container">
+        <h1>TouchDesigner 3D Instancing</h1>
+      </div>
+
+    </section>
 
     <!-- script pour les vidéos -->
     <script>
@@ -83,7 +99,7 @@
         <p>victor.liger28@gmail.com</p>
       </div>
 
-      <div class="footer-item">
+      <div class="footer-item" style="margin-top: 0px; margin-bottom: 0px;padding-bottom: 16px;">
         <img src="https://www.dropbox.com/scl/fi/uy5lrf5i6721tdvelso2u/bw-logo.svg?rlkey=x60lf628thixdkqjeaso8r0oq&raw=1" class="logo-img">
       </div>
 
