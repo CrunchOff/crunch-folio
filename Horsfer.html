@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/DINdong.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/4xgz9aviopyk8cpy60zdq/FAVICON.png?rlkey=so55r5o9ldku50tmo5ptl0yhv&raw=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="project-page-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <title>CrunchFolio</title>
+  <script src="processing/p5.min.js"></script>
+  <script src="processing/sketch.js"></script>
+</head>
+<body>
+  <header>
+    <section class="header-grid-container">
+      <div class="header-item">
+        <a href="index.html">
+          <h1 class="home-button">CrunchFolio</h1>
+        </a>
+      </div>
+
+      <div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+      </div>
+
+      <div class="header-item-empty">
+
+      </div>
+
+      <div class="header-item-empty">
+
+      </div>
+
+      <div class="header-item-2">
+        <h2 class="footer-h2">
+          Creative Digital Designer
+        </h2>
+      </div>
+
+    </section>
+
+  </header>
+
+  <main>
+
+    <section class="project-content">
+      <div class="left-container">
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/4XKlBPjL23U" title="FLASH ÉPISODE 2 - ENZO BERNARD" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/y86T2_FEEXw" title="FLASH ÉPISODE 1 - LIL SOUM" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="right-container">
+        <h1>Horsfer</h1>
+        <p>
+          Horsfer est un projet associatif que je mène avec des amis, dans lequel nous nous consacrons à la réalisation d’entretiens et de morceaux, mettant en lumière différents artistes locaux de la région Bretagne.
+          <br>
+          <br>
+          En tant que chef opérateur pour le projet Horsfer, je suis responsable de l’aspect technique de la vidéo, de la manipulation de la caméra et du choix des plans, à l’éclairage des scènes pour créer une atmosphère visuelle adaptée à chaque artiste et à leur performance.
+          <br>
+          <br>
+          Je m’occupe également de la post-production, en effectuant le montage en collaboration avec ma collègue, la colorimétrie pour donner une apparence professionnelle et harmonieuse à nos vidéos, et en réalisant certaines des animations en motion design pour ajouter du dynamisme à nos vidéos.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- script pour les vidéos -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const videos = document.querySelectorAll('video');
+
+          videos.forEach(video => {
+            if ('playsInline' in video) {
+              video.playsInline = true;
+            } else {
+              video.webkitPlaysInline = true;
+            }
+
+            video.play().catch(error => {
+              // Si la lecture automatique échoue, affichez un message d'erreur ou effectuez une action de secours
+              console.error('Error in autoplay:', error);
+            });
+          });
+        });
+    </script>
+
+  </main>
+
+  <footer>
+    <section class="footer-container">
+
+      <div class="footer-item">
+        <i class="fas fa-arrow-right fa-fw fa-lg animated-icon"></i>
+        <a href="https://www.instagram.com/victorliger.design" target="_blank" class="link-style">@victorliger.design</a>
+      </div>
+
+      <div class="footer-item">
+        <p>la-quimper-city-connexion</p>
+      </div>
+
+      <div class="footer-item">
+        <p>1312 all day</p>
+      </div>
+
+      <div class="footer-item">
+        <p>victor.liger28@gmail.com</p>
+      </div>
+
+      <div class="footer-item" style="margin-top: 0px; margin-bottom: 0px;padding-bottom: 16px;">
+        <img src="https://www.dropbox.com/scl/fi/uy5lrf5i6721tdvelso2u/bw-logo.svg?rlkey=x60lf628thixdkqjeaso8r0oq&raw=1" class="logo-img">
+      </div>
+
+    </section>
+  </footer>
+</body>
+</html>
