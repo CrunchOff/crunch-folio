@@ -37,6 +37,12 @@
   margin-bottom: 2rem;
 }
 
+.img-content {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
 .iframe-container {
   position: relative;
   padding-bottom: 56.25%; /* Rapport d'aspect 16:9 (782 / 1903 * 100 = 41.11%, mais on utilise généralement 56.25% pour 16:9) */
