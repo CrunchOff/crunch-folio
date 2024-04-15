@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CrunchFolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/DINdong.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/4xgz9aviopyk8cpy60zdq/FAVICON.png?rlkey=so55r5o9ldku50tmo5ptl0yhv&raw=1">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="project-page-styles.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+  <script src="processing/p5.min.js"></script>
+  <script src="processing/sketch.js"></script>
+
+</head>
+<body>
+  <header>
+    <section class="header-grid-container">
+      <div class="header-item">
+        <a href="index.html">
+          <h1 class="home-button">CrunchFolio</h1>
+        </a>
+      </div>
+
+      <div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+      </div>
+
+      <div class="header-item-empty">
+
+      </div>
+
+      <div class="header-item-empty">
+
+      </div>
+
+      <div class="header-item-2">
+        <h2 class="footer-h2">
+          Creative Digital Designer
+        </h2>
+      </div>
+
+    </section>
+
+  </header>
+
+  <main>
+
+    <section class="project-content">
+      <div class="left-container">
+        <video src="https://www.dropbox.com/scl/fi/losjr2y1s4cfkxr7xsgly/poppy-ai-compress.mp4?rlkey=n3vfbuyg0zfbgo0ap2ahh0lnu&raw=1" muted controls loop class="video-content"></video>
+        <video src="https://www.dropbox.com/scl/fi/bnu9nlhlj4w4z2i2hk911/poppy-loop.mp4?rlkey=gp2cswbboz16a4fl6phnql9eh&raw=1" muted controls loop class="video-content"></video>
+        <a href="https://www.dropbox.com/scl/fi/l8be25bd8picpc0jps9kj/gird.jpg?rlkey=we7c1ehbglju5ge5pjo05hovi&raw=1" target="_blank" class="link-style">
+          <img src="https://www.dropbox.com/scl/fi/l8be25bd8picpc0jps9kj/gird.jpg?rlkey=we7c1ehbglju5ge5pjo05hovi&raw=1" style="height: 600px">
+        </a>
+
+      </div>
+
+      <div class="right-container">
+        <h1>TouchDesigner X AI</h1>
+        <h1>Poppy Flower AI Generation</h1>
+        <br>
+        <p>
+        Pour ce projet, j'ai souhaité visualiser la génération étape par étape d'une image par une intelligence artificielle, en partant d'un bruit de pixels jusqu'à l'obtention d'une image réaliste.
+        <br>
+        <br>
+        J'ai ensuite animé la séquence d'images obtenue pour créer une boucle.
+        <br>
+        <br>
+        Cette animation m'a servi de matériel de base pour créer une composition audio-réactive dans TouchDesigner, que j'ai présentée lors d'une séance de live-coding aux Portes Logiques à Quimper.
+        <br>
+        <br>
+        Cette démarche m'a permis d'explorer les possibilités offertes par les technologies d'intelligence artificielle en matière de création visuelle et de développer mes compétences en matière de design génératif et de live-coding.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- script pour les vidéos -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const videos = document.querySelectorAll('video');
+
+          videos.forEach(video => {
+            if ('playsInline' in video) {
+              video.playsInline = true;
+            } else {
+              video.webkitPlaysInline = true;
+            }
+
+            video.play().catch(error => {
+              // Si la lecture automatique échoue, affichez un message d'erreur ou effectuez une action de secours
+              console.error('Error in autoplay:', error);
+            });
+          });
+        });
+    </script>
+
+  </main>
+
+  <footer>
+    <section class="footer-container">
+
+      <div class="footer-item">
+        <i class="fas fa-arrow-right fa-fw fa-lg animated-icon"></i>
+        <a href="https://www.instagram.com/victorliger.design" target="_blank" class="link-style">@victorliger.design</a>
+      </div>
+
+      <div class="footer-item">
+        <p>la-quimper-city-connexion</p>
+      </div>
+
+      <div class="footer-item">
+        <p>1312 all day</p>
+      </div>
+
+      <div class="footer-item">
+        <p>victor.liger28@gmail.com</p>
+      </div>
+
+      <div class="footer-item" style="margin-top: 0px; margin-bottom: 0px;padding-bottom: 16px;">
+        <img src="https://www.dropbox.com/scl/fi/uy5lrf5i6721tdvelso2u/bw-logo.svg?rlkey=x60lf628thixdkqjeaso8r0oq&raw=1" class="logo-img">
+      </div>
+
+
+    </section>
+  </footer>
+</body>
+</html>
