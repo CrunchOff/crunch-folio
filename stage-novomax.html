@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CrunchFolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/DINdong.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/4xgz9aviopyk8cpy60zdq/FAVICON.png?rlkey=so55r5o9ldku50tmo5ptl0yhv&raw=1">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="project-page-styles.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+  <script src="processing/p5.min.js"></script>
+  <script src="processing/sketch.js"></script>
+
+</head>
+<body>
+  <header>
+    <section class="header-grid-container">
+      <div class="header-item">
+        <a href="index.html">
+          <h1 class="home-button">CrunchFolio</h1>
+        </a>
+      </div>
+
+      <div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+      </div>
+
+      <div class="header-item-empty">
+
+      </div>
+
+      <div class="header-item-empty">
+
+      </div>
+
+      <div class="header-item-2">
+        <h2 class="footer-h2">
+          Creative Digital Designer
+        </h2>
+      </div>
+
+    </section>
+
+  </header>
+
+  <main>
+
+    <section class="project-content">
+      <div class="left-container">
+        <video src="https://www.dropbox.com/scl/fi/blep5if2yzk82xi0g1yn3/Le-Novomax-Programmation-Printemps-2022.mp4?rlkey=c9gzhl0gwn75ytz016ii67x1f&st=slns0707&raw=1" muted controls loop class="video-content"></video>
+        <video src="https://www.dropbox.com/scl/fi/trs6fkh1trgkd0yuwp7go/After-Movie-Stinky-Landmvrks.mp4?rlkey=ufvs4iuko4obv4ux538ppecfx&st=kmbpirxm&raw=1" muted controls loop class="video-content"></video>
+        <video src="https://www.dropbox.com/scl/fi/mwy5tn9f2erek1o64679k/Rendu-Arnaud-Le-Gou-fflec.mp4?rlkey=5o4h23yddoxafwmbppowueltk&st=9rm0qr99&raw=1" muted controls loop class="video-content"></video>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/LEY8n3kAphY" title="Présentation du cours de guitare par Fabrice Waeles" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/ZpWV8skIQxM" title="Présentation du cours de batterie  par Michel Lochou-Favennec" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+      </div>
+
+      <div class="right-container">
+        <h1>Stage Novomax</h1>
+        <h1>Video Captation & Motion-Design</h1>
+        <br>
+        <p>
+        Dans le cadre de ma deuxième année de DN MADe, j'ai eu l'opportunité de réaliser un stage au Novomax à Quimper, un lieu de diffusion et de pratique des musiques actuelles. Pendant ce stage, j'ai pu travailler sur différentes missions dans les domaines du numérique et de la vidéo. J'ai notamment réalisé une vidéo en motion design, destinée aux réseaux sociaux, pour annoncer la nouvelle programmation de la saison Printemps 2022. Pour cela, j'ai repris les codes de la brochure afin de créer une vidéo cohérente avec l'identité visuelle du Novomax.
+        <br>
+        <br>
+        J'ai également travaillé sur une série de vidéos, les "Aftermovies", pour lesquelles je filmais les différents concerts qui ont eu lieu pendant ma période de stage. J'étais ensuite en charge du montage de ces vidéos, afin de créer une courte séquence reprenant les moments forts de la soirée.
+        <br>
+        <br>
+        Enfin, j'ai participé au tournage d'interviews des professeurs de musique du lieu, ainsi qu'au montage et à la réalisation d'animations. Ce stage m'a permis de développer mes compétences en matière de vidéo et de motion design, et de mettre en pratique les connaissances que j'ai acquises pendant mes études. J'ai également pu découvrir le fonctionnement d'un lieu de diffusion de musiques actuelles et travailler en équipe sur des projets concrets.
+        </p>
+        <br>
+        <br>
+        <a href="https://lenovomax.bzh/" target="_blank" class="link-style">
+          Le Novomax - Site Web
+        </a>
+        <br>
+        <br>
+        <a href="https://www.instagram.com/novomax.quimper/" target="_blank" class="link-style">
+          Le Novomax - Instagram
+        </a>
+      </div>
+
+    </section>
+
+    <!-- script pour les vidéos -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const videos = document.querySelectorAll('video');
+
+          videos.forEach(video => {
+            if ('playsInline' in video) {
+              video.playsInline = true;
+            } else {
+              video.webkitPlaysInline = true;
+            }
+
+            video.play().catch(error => {
+              // Si la lecture automatique échoue, affichez un message d'erreur ou effectuez une action de secours
+              console.error('Error in autoplay:', error);
+            });
+          });
+        });
+    </script>
+
+  </main>
+
+  <footer>
+    <section class="footer-container">
+
+      <div class="footer-item">
+        <i class="fas fa-arrow-right fa-fw fa-lg animated-icon"></i>
+        <a href="https://www.instagram.com/victorliger.design" target="_blank" class="link-style">@victorliger.design</a>
+      </div>
+
+      <div class="footer-item">
+        <p>la-quimper-city-connexion</p>
+      </div>
+
+      <div class="footer-item">
+        <p>1312 all day</p>
+      </div>
+
+      <div class="footer-item">
+        <p>victor.liger28@gmail.com</p>
+      </div>
+
+      <div class="footer-item" style="margin-top: 0px; margin-bottom: 0px;padding-bottom: 16px;">
+        <img src="https://www.dropbox.com/scl/fi/uy5lrf5i6721tdvelso2u/bw-logo.svg?rlkey=x60lf628thixdkqjeaso8r0oq&raw=1" class="logo-img">
+      </div>
+
+
+    </section>
+  </footer>
+</body>
+</html>
