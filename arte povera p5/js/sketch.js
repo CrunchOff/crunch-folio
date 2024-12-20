@@ -30,7 +30,7 @@ function setup() {
 
 	// Créer une couche 2D pour le texte
 	titleLayer = createGraphics(windowWidth, windowHeight);
-	titleLayer.textFont(customTitleFont);
+	titleLayer.textFont(customTitleFont, 32);
 	titleLayer.textAlign(CENTER, CENTER);
 	titleLayer.textSize(160);
 	titleLayer.translate(0, -250);
@@ -41,7 +41,7 @@ function setup() {
 	titleLayer.smooth();
 
 	textLayer = createGraphics(windowWidth, windowHeight);
-	textLayer.textFont(customTextFont);
+	textLayer.textFont(customTextFont, 32);
 	textLayer.textAlign(CENTER, CENTER);
 	textLayer.textSize(32);
 	textLayer.translate(0, 0);
