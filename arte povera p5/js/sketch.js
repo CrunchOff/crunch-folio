@@ -21,6 +21,7 @@ function preload() {
 function setup() {
 	createCanvas(windowWidth, windowHeight, WEBGL);
 
+	pixelDensity(displayDensity()); // Adapte la densité de pixels au dispositif
 	resetMatrix();
 	imageMode(CENTER);
 	corrigerWEBGL();
