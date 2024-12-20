@@ -37,6 +37,7 @@ function setup() {
 	titleLayer.noStroke();
 	titleLayer.background(255, 0); // Transparence
 	titleLayer.text('ARTE POVERA', titleLayer.width / 2, titleLayer.height / 2);
+	titleLayer.smooth();
 
 	textLayer = createGraphics(windowWidth, windowHeight);
 	textLayer.textFont(customTextFont);
@@ -47,6 +48,7 @@ function setup() {
 	textLayer.noStroke();
 	textLayer.background(255, 0); // Transparence
 	textLayer.text(textString, titleLayer.width / 2, titleLayer.height / 2);
+	textLayer.smooth();
 }
 
 function draw() {
