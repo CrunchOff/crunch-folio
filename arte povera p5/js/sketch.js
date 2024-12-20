@@ -58,7 +58,7 @@ function draw() {
 	stroke(grey - 10);
 	strokeWeight(2);
 	translate(0, 0, 1);
-	scale(5.5);
+	scale(6.5);
 	rotateX(frameCount * 0.01);
 	rotateY(frameCount * 0.01);
 
