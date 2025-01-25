@@ -119,7 +119,7 @@ footer {
   gap: 1.5rem;
   align-items: start; /* Aligne les éléments au sommet */
   max-width: 1920px; /* Limite la largeur totale */
-  margin: auto;
+  margin: 30px;
 }
 
 .grid-item {
