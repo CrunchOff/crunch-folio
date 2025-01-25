@@ -18,7 +18,7 @@ function setup() {
 
 function draw() {
   // Efface légèrement les anciens dessins pour créer un effet de traînée
-  background(8, 11, 13, 50); // Ajout d'une légère transparence pour l'effet de persistance
+  //background(8, 11, 13, 50); // Ajout d'une légère transparence pour l'effet de persistance
   
   // Dessiner une ellipse dynamique
   fill(8, 11, 13); 
