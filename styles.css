@@ -118,6 +118,8 @@ footer {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
   align-items: start; /* Aligne les éléments au sommet */
+  max-width: 1920px; /* Limite la largeur totale */
+  margin: auto;
 }
 
 .grid-item {
@@ -163,9 +165,8 @@ footer {
 }
 
 .grid-container video:hover {
-  transform: scale(1.05); /* Agrandit légèrement la vidéo */
+  transform: scale(1.02); /* Agrandit légèrement la vidéo */
   transition: transform 0.3s ease-in-out;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
 }
 
 @media only screen and (max-width: 768px) {
