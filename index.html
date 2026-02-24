@@ -157,8 +157,6 @@
         </a>
       </div>
 
-      <!-- Ajoutez plus de projets si nécessaire -->
-
     </section>
 
     <!-- script pour les vidéos -->
@@ -192,28 +190,24 @@
   document.addEventListener("DOMContentLoaded", function () {
     const videos = document.querySelectorAll("video");
 
-    // Utilise l'Intersection Observer pour détecter quand une vidéo entre dans le viewport
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         const video = entry.target;
 
         if (entry.isIntersecting) {
-          // Lance la vidéo quand elle entre dans le viewport
           video.play().catch(error => console.error("Error playing video:", error));
         } else {
-          // Mets la vidéo en pause si elle sort du viewport
           video.pause();
         }
       });
     }, {
-      threshold: 0.25 // Lance la vidéo seulement si 50% de celle-ci est visible
+      threshold: 0.25
     });
 
-    // Ajoute chaque vidéo à l'observateur
     videos.forEach(video => observer.observe(video));
   });
 </script>
 
   
 </body>
-</html>
+</html>// slumfiles.rar

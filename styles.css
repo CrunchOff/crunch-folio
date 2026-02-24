@@ -1,10 +1,9 @@
+/* ==========================================================================
+   1. RESET & BASE
+   ========================================================================== */
+
 * {
   box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 body {
@@ -14,24 +13,30 @@ body {
   padding: 0;
 }
 
-header {
-  background-color: #080b0d;
-  color: #faf9f7;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  text-align: center;
-  border-bottom: 1px solid #faf9f7;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-@media only screen and (min-width: 768px) {
-  header {
-    height: 82px;
-  }
+video {
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
 }
 
-h1 {
+/* ==========================================================================
+   2. TYPOGRAPHY & FONTS
+   ========================================================================== */
 
+@font-face {
+  font-family: 'DINdong';
+  src: url('fonts/DINdong.woff2') format('woff2'),
+    url('fonts/DINdong.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
+
+h1 {}
 
 h2 {
   color: #faf9f7;
@@ -42,29 +47,25 @@ p {
   color: #faf9f7;
 }
 
-video {
-  object-fit: contain;
-  overflow-clip-margin: content-box;
-  overflow: clip;
-}
+/* ==========================================================================
+   3. HEADER
+   ========================================================================== */
 
-footer {
+header {
   background-color: #080b0d;
   color: #faf9f7;
-  border-top: 1px solid #faf9f7
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-align: center;
+  border-bottom: 1px solid #faf9f7;
 }
 
-/* Import Custom Font */
-
-@font-face {
-  font-family: 'DINdong';
-  src: url('fonts/DINdong.woff2') format('woff2'),
-       url('fonts/DINdong.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+.header-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 100%;
+  width: 100%;
 }
-
-/* Class */
 
 .header-item {
   display: flex;
@@ -84,13 +85,6 @@ footer {
   height: auto;
 }
 
-.header-grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  max-width: 100%;
-  width: 100%;
-}
-
 .home-button {
   font-size: 4rem;
   margin-top: 4rem;
@@ -104,91 +98,106 @@ footer {
   animation: fast-blur 0.4s ease-in-out forwards;
 }
 
-.logo-img {
-  width: 50px;
-  margin: 0px;
-}
-
-.footer-h2 {
-  font-size: 1.4rem;
-}
+/* ==========================================================================
+   4. PROJECT GRID
+   ========================================================================== */
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-  align-items: start; /* Aligne les éléments au sommet */
-  max-width: 1920px; /* Limite la largeur totale */
-  margin: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-flow: dense;
+  gap: 8px;
+  padding: 1px;
+  max-width: 100%;
+  margin: 4rem 2rem;
 }
 
 .grid-item {
-  text-align: left;
-  display: block;
+  aspect-ratio: 1 / 1;
 }
 
 .grid-item-large {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  text-align: left;
   grid-column: span 2;
+  aspect-ratio: 2 / 1;
 }
 
-.grid-item img {
-  max-width: 100%;
-  height: auto;
+.grid-item,
+.grid-item-large {
+  position: relative;
+  background-color: #000;
+  overflow: hidden;
+  transition: none;
+}
+
+.grid-item a,
+.grid-item-large a {
   display: block;
+  width: 100%;
+  height: 100%;
 }
 
-.grid-item video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
+.grid-item img,
+.grid-item video,
 .grid-item-large video {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* Garantit que le centre de la vidéo est visible */
   display: block;
 }
 
-.grid-item h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
+.grid-item h2,
 .grid-item-large h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  margin: 0;
+  font-family: 'DINDONG';
+  font-size: 20px;
+  color: #fff;
+  padding: 5px;
+  z-index: 10;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
 }
 
-.grid-container video:hover {
-  transform: scale(1.02); /* Agrandit légèrement la vidéo */
-  transition: transform 0.3s ease-in-out;
+.grid-item p,
+.grid-item-large p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  font-family: 'DINDONG';
+  font-size: 10px;
+  color: #ccc;
+  z-index: 10;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-@media only screen and (max-width: 768px) {
-  .grid-item-large {
-    grid-column: span 1; /* Occupe 1 colonne sur les écrans jusqu'à 768px de large */
-  }
+/* Interaction Focus */
+.grid-item:hover,
+.grid-item-large:hover {
+  z-index: 50;
+  outline: 2px solid #00ff41;
 }
 
-@media only screen and (max-width: 480px) {
+.grid-item-large:hover h2,
+.grid-item:hover h2 {
+  background: #00ff41;
+  color: #000;
+  border-color: #00ff41;
+}
 
-  header {
-    padding-left: 1rem;
-    padding-right: 1.5rem;
-  }
+/* ==========================================================================
+   5. FOOTER
+   ========================================================================== */
 
-  .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste la largeur minimale des colonnes à 200px sur les écrans jusqu'à 480px de large */
-  }
-
-  .home-button {
-    font-size: 3.2rem;
-  }
+footer {
+  background-color: #080b0d;
+  color: #faf9f7;
+  border-top: 1px solid #faf9f7;
 }
 
 .footer-container {
@@ -215,6 +224,15 @@ footer {
   font-size: 1rem;
 }
 
+.footer-h2 {
+  font-size: 1.4rem;
+}
+
+.logo-img {
+  width: 50px;
+  margin: 0px;
+}
+
 .link-style {
   font-size: 1rem;
   color: #faf9f7;
@@ -232,22 +250,92 @@ footer {
   animation: bounce 1.5s infinite ease-in-out;
 }
 
-/* Animation */
+/* ==========================================================================
+   6. ANIMATIONS
+   ========================================================================== */
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(-10px);
   }
 }
 
 @keyframes fast-blur {
-  0%, 100% {
+
+  0%,
+  100% {
     filter: blur(0px);
   }
+
   50% {
     filter: blur(3px);
+  }
+}
+
+/* ==========================================================================
+   7. MEDIA QUERIES
+   ========================================================================== */
+
+/* Tablet & Desktop height adjustment */
+@media only screen and (min-width: 768px) {
+  header {
+    height: 82px;
+  }
+}
+
+/* Tablets and small screens */
+@media only screen and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    margin: 2rem 1rem;
+    gap: 1px;
+    padding: 1px;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+    gap: 10px;
+    /* On ajoute un peu d'espace sur mobile pour la lisibilité */
+    background-color: transparent;
+    border: none;
+  }
+
+  .grid-item,
+  .grid-item-large {
+    grid-column: span 1 !important;
+    aspect-ratio: 16 / 9;
+    border: 1px solid #333;
+    margin-bottom: 10px;
+  }
+
+  .home-button {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+
+  header {
+    padding: 0 1rem;
+  }
+}
+
+/* Small Mobile */
+@media only screen and (max-width: 480px) {
+  .home-button {
+    font-size: 2.2rem;
+  }
+
+  .grid-item h2,
+  .grid-item-large h2 {
+    font-size: 16px;
   }
 }

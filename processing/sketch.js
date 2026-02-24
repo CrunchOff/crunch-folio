@@ -17,12 +17,11 @@ function setup() {
 }
 
 function draw() {
-  // Efface légèrement les anciens dessins pour créer un effet de traînée
-  //background(8, 11, 13, 50); // Ajout d'une légère transparence pour l'effet de persistance
-  
-  // Dessiner une ellipse dynamique
-  fill(8, 11, 13); 
-  stroke(255);
+
+  //fill(0, 225, 15); 
+  blendMode(DIFFERENCE);
+  stroke(0,255,0);
+  strokeWeight(10);
   ellipse(x, y, diameter, diameter);
 
   // Mise à jour des coordonnées et de la taille de l'ellipse

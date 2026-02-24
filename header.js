@@ -16,7 +16,7 @@ function loadHeader() {
 
       <div class="header-item-2">
         <h2 class="footer-h2">
-          Creative Digital Designer
+          Design Numérique
         </h2>
       </div>
     </section>
